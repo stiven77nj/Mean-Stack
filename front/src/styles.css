@@ -45,8 +45,8 @@ a {
     margin: 0px;
     transition: all 0.4s;
     -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
 }
 
 a:focus {
@@ -160,9 +160,12 @@ button:hover {
 
 /*------------------------------------------------------------------
 [ Form ]*/
-
-.login100-form {
+.login-form{
   width: 100%;
+}
+.login100-form {
+  width: 60%;
+  margin: auto;
 }
 
 .login100-form-title {
@@ -2904,3 +2907,6 @@ flex-direction: column;
 -ms-align-items: center;
 align-items: center;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

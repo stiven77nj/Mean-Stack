@@ -1,7 +1,21 @@
-<h1>Dashboard</h1>
-<hr><hr>
+<div class="fondo dis-flex flex-row">
 
-<h3>User info</h3>
-<pre>{{usuario | json}} </pre>
+  <div class="sidebar">
+    <app-sidebar></app-sidebar>
 
-<button (click)="logout()">Cerrar sesion</button>
+  </div>
+
+  <div class="content overflow-auto">
+    <app-menu></app-menu>
+    <app-mapas></app-mapas>
+    <h2>Dashboard</h2>
+    <hr><hr>
+
+    <h3>User info</h3>
+    <pre>{{usuario.name}} <br>{{usuario.uid}}  </pre>
+
+
+
+  </div>
+
+</div>

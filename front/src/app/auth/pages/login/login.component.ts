@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import Swal from 'sweetalert2';
+import { PlacesService } from '../../services';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -18,7 +19,8 @@ export class LoginComponent {
   constructor(
     private fb:FormBuilder,
     private router:Router,
-    private authService:AuthService
+    private authService:AuthService ,
+    private placesService:PlacesService
     ) { }
 
   login(){

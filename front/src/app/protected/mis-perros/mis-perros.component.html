@@ -1,0 +1,50 @@
+<div class="fondo dis-flex flex-row">
+
+  <div class="sidebar">
+    <app-sidebar></app-sidebar>
+
+  </div>
+
+  <div class="content">
+    <app-menu  ></app-menu>
+
+    <div class="row p">
+      <div class="row dis-flex justify-content-around p-lista">
+
+        <h2>Lista Perros</h2>
+
+
+        <div class="row dis-flex flex-col ficha" *ngFor="let p of Perro">
+          <div class="col m-auto text-capitalize text-center ficha-text">
+            {{p.nombre}}
+          </div>
+          <div class="col m-auto ficha-img" [routerLink]="['../editarPerro']">
+            <img src="../../../assets/images/ass.png"  alt="">
+          </div>
+
+        </div>
+
+
+      </div>
+
+      <div class=" p-agregar d-flex justify-content-end align-items-start" [routerLink]="['../agregarPerro']" >
+        <div class="row dis-flex  fichaPlus ">
+          <div class="col text-capitalize text-center ficha-textP">
+            <p class="m-auto">Agregar Perro</p>
+          </div>
+          <hr>
+          <div class="col dis-flex justify-content-center ficha-imgP ">
+            <img src="../../../assets/images/plus.png"  alt="">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+  </div>
+
+</div>
+
+

@@ -1,0 +1,92 @@
+<div class="fondo dis-flex flex-row">
+
+  <div class="sidebar">
+    <app-sidebar></app-sidebar>
+
+  </div>
+
+  <div class="content">
+    <app-menu></app-menu>
+
+    <div class="row cont-agregar">
+      <div class="row text-center m-auto texto">
+        <h2>Registro de Mascota</h2>
+      </div>
+
+      <div class="row">
+
+        <form (ngSubmit)="agregarPerro()" class="row formulario">
+          <div class="row">
+            <div class="col-sm-2">
+              <label class="form-label">Nombre</label>
+            </div>
+            <div class="col-sm-4">
+              <input type="text" placeholder="Nombre" [value]="np.nombre" [(ngModel)]="np.nombre" name="nombre">
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-2">
+              <label class="form-label">Edad</label>
+            </div>
+            <div class="col-sm-4">
+              <input type="text" placeholder="Edad" [value]="np.edad" [(ngModel)]="np.edad" name="edad">
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-2">
+              <label class="form-label">Raza</label>
+            </div>
+            <div class="col-sm-4">
+              <input type="text" placeholder="Raza" [value]="np.raza" [(ngModel)]="np.raza" name="raza">
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-2">
+              <label class="form-label">Vacunas</label>
+            </div>
+            <div class="col-sm-4">
+              <input type="text" placeholder="vacunas" [value]="np.vacunas" [(ngModel)]="np.vacunas" name="vacunas">
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-2">
+              <label class="form-label">Preferencias</label>
+            </div>
+            <div class="col-sm-5">
+              <input type="text" placeholder="preferencias" [value]="np.preferencias" [(ngModel)]="np.preferencias" name="preferencias">
+            </div>
+          </div>
+
+          <div class="col-md-2 m-auto" >
+            <br>
+            <button class="btn btn-success" >Agregar</button>
+
+          </div>
+          <div class="col-md-2 m-auto" >
+            <br>
+            <button class="btn btn-danger" [routerLink]="['../misPerros']">Volver</button>
+
+          </div>
+
+
+
+        </form>
+
+
+      </div>
+    </div>
+
+
+
+  </div>
+
+</div>
+
+
+
+
+

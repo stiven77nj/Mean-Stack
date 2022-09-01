@@ -1,0 +1,13 @@
+.navbar{
+  height: 70px;
+  color: white;
+  background-color: #004E89;
+  position:fixed; top:0; left:15%;width: 85%;
+}
+.cuenta{
+  width: 80%;
+  margin: auto;
+  text-align: end;
+  padding-right: 50px;
+  font-size: 20px;
+}

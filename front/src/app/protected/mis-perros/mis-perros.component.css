@@ -1,0 +1,66 @@
+
+.content{
+  position:fixed;
+  top:70px;
+  left:15%;
+  width: 85%;
+  border:solid red 1px;
+  height: 100vh;
+
+}
+.ficha{
+  margin-left: 10px ;
+  width: 30%;
+  border: solid black 2px;
+  border-radius: 20px;
+  margin: 20px 0;
+}
+.ficha-text{
+  font-size: 25px;
+  padding: 10px;
+}
+.ficha-img img{
+  width: 100%;
+  padding: 20px;
+}
+.p{
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+
+}
+.p-lista{
+
+  width: 80%;
+  /* border: solid red 1px; */
+
+}
+h2{
+
+  font-size: 30px;
+  text-align: center;
+}
+
+.p-agregar{
+  /* margin-left: 20px; */
+  width: 20%;
+
+
+}
+.fichaPlus{
+  width: 15%;
+  top: 85px;
+  border: solid gray 2px;
+  border-radius: 20px;
+  height: 200px;
+  position: absolute;
+
+}
+.ficha-textP p{
+
+  font-size: 20px;
+}
+.ficha-imgP img{
+    width: 100px;
+    height: 100px;
+}

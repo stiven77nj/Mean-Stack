@@ -1,0 +1,20 @@
+
+<div class="menu dis-flex flex-col ">
+  <div class="img" [routerLink]="['/dashboard']"  >
+    <img src="../../../assets/images/perro.png" alt="" >
+  </div>
+
+
+  <div class="opc">
+    <ul class="list-group list-group-flush" >
+      <li class="list-group-item m-auto dis-flex justify-content-center  " *ngFor="let m of menuItems" [routerLink]="[m.ruta]" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+
+        <div class="item dis-flex m-auto">
+          {{m.nombre}}
+        </div>
+      </li>
+    </ul>
+
+  </div>
+
+</div>

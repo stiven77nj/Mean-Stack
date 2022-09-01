@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
-import { AuthResponse, Usuario } from '../interfaces/interfaces';
+import { AuthResponse, Usuario, Perro, MarcadorColor } from '../interfaces/interfaces';
 import { catchError, map, tap } from 'rxjs/operators'
 import { of, Observable } from 'rxjs';
 
@@ -13,6 +13,7 @@ import { of, Observable } from 'rxjs';
 export class AuthService {
   private baseUrl:string = environment.baseUrl;
   private _usuario!:Usuario;
+  marcadorColor: any;
   get usuario (){
     return {...this._usuario}
   }
@@ -70,5 +71,20 @@ export class AuthService {
       //   catchError(err => of(false))
       // );
 
+  }
+
+  private _perros:Perro[]=[{
+    nombre:'firu',
+    edad:3,
+    raza:'chihuahua',
+  }];
+  get Perros():Perro[]{
+    return [...this._perros];
+  }
+  get Marcador():MarcadorColor[]{
+    return[...this.Marcador];
+  }
+  agregar_perro(perro:Perro){
+    this._perros.push(perro);
   }
 }

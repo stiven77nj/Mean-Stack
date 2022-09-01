@@ -1,0 +1,113 @@
+<div class="fondo dis-flex flex-row">
+
+  <div class="sidebar">
+    <app-sidebar></app-sidebar>
+
+  </div>
+
+  <div class="content overflow-auto">
+    <app-menu></app-menu>
+
+    <div class="ext row-cols-1 m-4 ">
+
+      <div class="dis-flex flex-row f1 h-auto">
+        <div class="col-6 text-center h-75 m-auto">
+          <p>Paseo Personalizado</p>
+
+        </div>
+        <div class="col-6 text-center h-50 m-auto">
+          <p >Paseo Grupal</p>
+        </div>
+
+      </div>
+
+      <div class="dis-flex flex-row f2 h-auto p-1">
+        <div class="col text-center">
+          <img src="../../../assets/images/caminando-con-perro.png" width="80px" height="80px" alt="">
+        </div>
+        <div class="col text-center h-75 m-auto">
+          <b>Paseo Personalizado</b>
+          <p>kjsajksjkajaksjksajaskaskj</p>
+        </div>
+        <div class="col text-center">
+          <p>Tarifa Base <br>10000 pesos</p>
+        </div>
+        <hr>
+      </div>
+
+      <div class="dis-flex flex-row f3 h-75 servicio">
+        <div class="col-4 m-auto p-3 formulario">
+
+          <form action="" class="row w-75 m-auto">
+            <div class="row">
+              <div class="col-sm-5">
+                <label class="form-label">Nombre:</label>
+              </div>
+              <div class="col-sm-7  text-center ">
+                <input type="text" placeholder="Nombre"  >
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-5">
+                <label class="form-label">Origen:</label>
+              </div>
+              <div class="col-sm-7  text-center ">
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" > </a></li>
+                </ul>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-5">
+                <label class="form-label">Raza:</label>
+              </div>
+              <div class="col-sm-7">
+                <input type="text" placeholder="Raza" >
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-5">
+                <label class="form-label">Vacunas:</label>
+              </div>
+              <div class="col-sm-7">
+                <input type="text" placeholder="vacunas">
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-5">
+                <label class="form-label">Gustos:</label>
+              </div>
+              <div class="col-sm-7">
+                <input type="text" placeholder="Gustos">
+              </div>
+            </div>
+
+            <div class="col m-auto" >
+              <br>
+              <button class="btn btn-success" >Enviar Solicitud</button>
+
+            </div>
+
+
+          </form>
+        </div>
+
+
+        <div class="col-9 text-center mapa">
+
+          <app-mapa-marcador></app-mapa-marcador>
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+
+</div>
