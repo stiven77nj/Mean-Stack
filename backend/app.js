@@ -15,7 +15,9 @@ app.use( cors() );
 app.use( express.json() );
 
 // Rutas
-app.use( '/api/user', require('./routes/user') );
+app.use( '/api/user', require('./routes/user') ); // Usuarios
+app.use( '/api/dog', require('./routes/dog') ); // Perros
+
 
 // Metodo listen para correr el servidor
 app.listen( process.env.PORT, () => {

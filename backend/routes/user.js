@@ -2,11 +2,13 @@ const { Router } = require('express');
 const { check } = require('express-validator');
 
 const { validateFields } = require('../middlewares/validateFields');
-const { createUser, loginUser } = require('../controllers/user');
+const { createUser, loginUser, createDog, renovarToken, dogsUser } = require('../controllers/user');
 
 const { existsEmail } = require('../helpers/dbValidator');
+const { validateJWT } = require('../middlewares/validateJWT');
 
 const router = Router();
+
 
 // Crear un nuevo usuario
 router.post('/register', [
@@ -27,6 +29,25 @@ router.post('/', [
     check('password','La contraseña debe tener minimo 6 caracteres').isLength( {min: 6} ),
     validateFields
 ], loginUser);
+
+// Renovar token 
+router.get('/renew', [
+    validateJWT,
+], renovarToken);
+
+// Registrar perro 
+router.post('/registerDog', [
+    validateJWT,
+    check('name','El nombre es obligatorio').notEmpty(),
+    check('age','La edad es obligatoria').notEmpty(),
+    check('breed','La raza es obligatoria').notEmpty(),
+    validateFields
+], createDog);
+
+
+// Obtener perros
+router.get('/dogsUser', validateJWT, dogsUser);
+
 
 // Exportacion de las rutas
 module.exports = router;
