@@ -22,8 +22,20 @@ const UserSchema = Schema({
     state: {
         type: Boolean,
         default: true
-    }
+    },
+    dogs : [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Dog'
+        }
+    ]
 });
+
+UserSchema.methods.toJSON = function() {
+    const { __v, password, _id, ...user } = this.toObject();
+    user.uid = _id;
+    return user;
+}
 
 // Exportacion del modelo
 module.exports = model('User', UserSchema);
