@@ -8,7 +8,74 @@
   <div class="content">
     <app-menu></app-menu>
 
-    <h1>seguimiento</h1>
+    <div class="exterior">
+      <div class="despliegue  ">
+        <div class="paseo dis-flex flex-column m-auto">
+          <div class="paseo-cont m-auto " >
+
+            <select class="form-select-sm selector"   aria-label="Default select example" >
+              <option selected>Selecciona </option>
+              <option > Paseo 1 </option>
+              <option > Paseo 2 </option>
+              <option > Paseo 3 </option>
+            </select>
+            <br>
+            <div class="texto  m-auto" *ngIf="datos">
+              <p>
+                <b>Paseo Personalizado - FINALIZADO</b><br>
+                Firulais, Lucas, Toby
+
+              </p>
+              <p>
+                Paseador: Juan Carlos Flórez <br>
+                3163202213
+              </p>
+              <button class="btn btn-outline-success dis-flex justify-content-center m-auto" (click)="desplegar()">
+                Ver detalle
+              </button>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="seguimiento text-center m-t-20" *ngIf="flag">
+
+          <h2><b>Seguimiento</b></h2>
+          <table class="table w-75 m-auto">
+            <thead>
+              <tr>
+                <td class="table-success" scope="col"></td>
+                <td scope="col">7:00</td>
+                <td scope="col">Aceptacion de la orden</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="table-success" scope="row"></th>
+                <td>7:10</td>
+                <td>Entrega de la mascota</td>
+              </tr>
+              <tr>
+                <th scope="row"></th>
+                <td>7:40</td>
+                <td>LLegada al parque</td>
+              </tr>
+              <tr>
+                <th scope="row"></th>
+                <td >8:20</td>
+                <td>Finaliza paseo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="mapa">
+        <!-- <app-mapas></app-mapas> -->
+        <app-mapa-seguimiento></app-mapa-seguimiento>
+        <!-- <app-mapa-marcador></app-mapa-marcador> -->
+      </div>
+    </div>
 
 
   </div>

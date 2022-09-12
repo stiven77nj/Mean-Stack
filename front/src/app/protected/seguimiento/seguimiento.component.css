@@ -5,7 +5,47 @@
   left:15%;
   width: 85%;
   height: 100vh;
-  border:solid red 1px;
-  padding: 10px;
+  /* border:solid red 1px; */
+  /* padding: 10px; */
 
+}
+.exterior{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+.despliegue{
+  /* border: solid black 1px; */
+  width: 30%;
+}
+.mapa{
+  /* border: solid black 1px; */
+  width: 70%;
+  height: 100%;
+}
+.selector{
+  width: 90%;
+  border-radius: 10px;
+  margin: 10px;
+}
+.paseo{
+  width: 100%;
+  /* height: 40%; */
+  /* border: solid black 1px; */
+  background-color: lightgrey;
+}
+.paseo-cont{
+  padding: 10px;
+  width: 90%;
+  /* border: solid black 1px; */
+}
+.texto{
+  width: 90%;
+  text-align: start;
+}
+p{
+  color: black;
+}
+.seguimiento td{
+  font-size: 15px;
 }

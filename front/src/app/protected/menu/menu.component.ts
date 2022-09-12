@@ -16,6 +16,7 @@ export class MenuComponent  {
   }
   logout(){
     this.router.navigateByUrl('/auth');
+    this.authService.logOut();
   }
 
 }

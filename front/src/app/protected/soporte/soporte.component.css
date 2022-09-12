@@ -5,7 +5,44 @@
   left:15%;
   width: 85%;
   height: 100vh;
-  border:solid red 1px;
-  padding: 10px;
+  /* border:solid red 1px; */
 
+
+}
+.exterior{
+  background-image: url("../../../assets/images/bg-2.png");
+  height: 100%;
+}
+.primero{
+  height: 15%;
+}
+.principal{
+  background-color: white;
+  height: 50%;
+}
+.uso , .preguntas , .reportes{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  /* border: solid black 1px; */
+}
+
+.ultimo{
+  height: 35%;
+}
+.caja-uso, .caja-preguntas, .caja-reportes{
+  width: 80%;
+  height: 80%;
+  /* border: solid gray 2px; */
+  background-color: whitesmoke  ;
+  border-radius: 30px;
+  margin: auto;
+
+}
+.icon{
+  margin: 10px 0;
+}
+p{
+  font-size: 12px;
+  text-align: center;
 }

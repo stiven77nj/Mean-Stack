@@ -8,7 +8,74 @@
   <div class="content">
     <app-menu></app-menu>
 
-    <h1>historial</h1>
+    <div class="exterior">
+      <div class=" tabla">
+        <br>
+        <h1 class="text-center "><b>Historial</b></h1>
+        <nav class="navbar  m-auto p-t-10">
+          <div class="container-fluid ">
+
+            <select class="form-select form-select-sm w-50" aria-label=".form-select-sm example">
+              <option selected>Todos los servicios</option>
+              <option value="1">Servicios Recientes</option>
+              <option value="2">Servicio por mascota</option>
+
+            </select>
+
+            <form class="d-flex " role="search">
+              <input class="form-control me-2" type="search" placeholder="¿Qué deseas buscar?" aria-label="Search">
+              <button class="btn btn-outline-dark" type="submit">Buscar</button>
+            </form>
+          </div>
+        </nav>
+        <br>
+
+        <table class="table table-striped table-hover text-center m-auto">
+          <thead>
+            <tr>
+              <th scope="col"><b>Fecha</b></th>
+              <th scope="col"><b>Paseador</b></th>
+              <th scope="col"><b>Paseo</b></th>
+              <th scope="col"><b>Calificación</b></th>
+              <th scope="col"><b>Origen</b></th>
+              <th scope="col"><b>Destino</b></th>
+              <th scope="col"><b>Precio</b></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td scope="row">30-08-22</td>
+              <td>Juan Carlos Martinez</td>
+              <td>PERSONALIZADO</td>
+              <td>5.0</td>
+              <td>Cra 28#12-45</td>
+              <td>Parque de los Niños</td>
+              <td>$15000</td>
+            </tr>
+            <tr>
+              <td scope="row">17-08-22</td>
+              <td>Marcos Rodriguez</td>
+              <td>PERSONALIZADO</td>
+              <td>4.0</td>
+              <td>Cra 28#12-45</td>
+              <td>Cra 33#36-36</td>
+              <td>$18000</td>
+            </tr>
+            <tr>
+              <td scope="row">11-08-22</td>
+              <td>Pedro Andrés López</td>
+              <td>GRUPAL</td>
+              <td>4.6</td>
+              <td>Cra 28#12-45</td>
+              <td>Parque La Flora</td>
+              <td>$7000</td>
+            </tr>
+          </tbody>
+        </table>
+
+
+      </div>
+    </div>
 
 
   </div>

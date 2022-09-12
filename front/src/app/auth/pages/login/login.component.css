@@ -1,12 +1,25 @@
 .caja{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 
+  border-radius: 20px;
 }
 .caja1{
   width: 40%;
 
 
+}
+.cabecero{
+  width: 100%;
+  height: 20%;
+  border-bottom: solid black 1px;
+  /* background-color: #1c5581; */
+  background-color: lightgray;
+}
+.contenido{
+  width: 100%;
+  height: 80%;
+  /* border: solid black 1px; */
 }
 .img{
   width: 60%;

@@ -1,13 +1,17 @@
 
 
 
-<nav class="navbar dis-flex flex-row fixed-top"   >
+<nav class="navbar dis-flex flex-sm-column justify-content-around fixed-top"   >
 
 
-  <div class="cuenta text-capitalize">
+  <div class="cuenta text-capitalize m-auto text-end p-2">
+
     {{usuario.name  }}
+    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
   </div>
-  <button class="btn btn-light" (click)="logout()">Cerrar sesion</button>
+  <div class="boton">
+    <button class="btn btn-light" (click)="logout()">Cerrar sesion</button>
+  </div>
 
 </nav>
 

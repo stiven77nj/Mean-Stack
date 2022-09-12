@@ -8,87 +8,119 @@
   <div class="content overflow-auto">
     <app-menu></app-menu>
 
-    <div class="ext row-cols-1 m-4 ">
+    <div class="ext row-cols-1  "*ngIf="paseo_pers" >
 
-      <div class="dis-flex flex-row f1 h-auto">
-        <div class="col-6 text-center h-75 m-auto">
-          <p>Paseo Personalizado</p>
+      <div class="dis-flex flex-row f1 "  >
+        <div class="col-6 text-center h-75 m-auto" (click)="irPersonalizado()">
+          <p class="m-auto" [ngClass]="{'blanco': paseo_pers }" >Paseo Personalizado</p>
 
         </div>
-        <div class="col-6 text-center h-50 m-auto">
-          <p >Paseo Grupal</p>
+        <div class="col-6 text-center  m-auto" (click)="irGrupal()" >
+          <p class="m-auto" [ngClass]="{'blanco': paseo_grupal }" >Paseo Grupal</p>
         </div>
 
       </div>
 
       <div class="dis-flex flex-row f2 h-auto p-1">
         <div class="col text-center">
-          <img src="../../../assets/images/caminando-con-perro.png" width="80px" height="80px" alt="">
+          <img src="../../../assets/images/caminando-con-perro.png" width="100px" height="85px" alt="">
         </div>
         <div class="col text-center h-75 m-auto">
           <b>Paseo Personalizado</b>
-          <p>kjsajksjkajaksjksajaskaskj</p>
+          <p class="t"> ¿Tú y tu(s) perro(s) tienen necesidades muy específicas?, sin duda el paseo individual te brinda la mejor alternativa para hacer las solicitudes que necesites, porque sabemos que todos los perritos son un mundo diferente. (Máximo 8 perros)</p>
         </div>
-        <div class="col text-center">
-          <p>Tarifa Base <br>10000 pesos</p>
+        <div class="col text-center  m-auto  ">
+          <div class="tarifa m-auto">
+            <p class="m-auto">Tarifa Base <br>$10000 pesos</p>
+
+          </div>
         </div>
         <hr>
       </div>
 
       <div class="dis-flex flex-row f3 h-75 servicio">
-        <div class="col-4 m-auto p-3 formulario">
+        <div class="col-4 m-auto  formulario">
 
-          <form action="" class="row w-75 m-auto">
+          <form action="" class="row  m-auto">
             <div class="row">
-              <div class="col-sm-5">
-                <label class="form-label">Nombre:</label>
+              <div class="col-sm-12">
+                <label class="form-label">Nombre del Perro:</label>
               </div>
-              <div class="col-sm-7  text-center ">
-                <input type="text" placeholder="Nombre"  >
+              <div class="col-sm-12  text-center ">
+
+                <select class="form-select-sm selector"   aria-label="Default select example" >
+                  <option selected>Selecciona </option>
+                  <!-- <option *ngFor="let p of Perros ; let i=index ">Punto {{i+1}} </option> -->
+                </select>
               </div>
             </div>
             <hr>
             <div class="row">
-              <div class="col-sm-5">
-                <label class="form-label">Origen:</label>
+              <div class="col-sm-12">
+                <label class="form-label" >Origen:</label>
               </div>
-              <div class="col-sm-7  text-center ">
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" > </a></li>
-                </ul>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-5">
-                <label class="form-label">Raza:</label>
-              </div>
-              <div class="col-sm-7">
-                <input type="text" placeholder="Raza" >
+              <div class="col-sm-12  text-center ">
+                <select class="form-select-sm selector"   aria-label="Default select example" >
+                  <option selected>Selecciona </option>
+                  <option *ngFor="let m of marcadores ; let i=index " [ngStyle]="{'background-color': m.color }">Punto {{i+1}} </option>
+                </select>
               </div>
             </div>
             <hr>
             <div class="row">
-              <div class="col-sm-5">
-                <label class="form-label">Vacunas:</label>
+              <div class="col-sm-12">
+                <label class="form-label" >Destino:</label>
               </div>
-              <div class="col-sm-7">
-                <input type="text" placeholder="vacunas">
+              <div class="col-sm-12  text-center ">
+                <select class="form-select-sm selector"   aria-label="Default select example" >
+                  <option selected>Selecciona </option>
+                  <option *ngFor="let m of marcadores ; let i=index " [ngStyle]="{'background-color': m.color }">Punto {{i+1}} </option>
+                </select>
               </div>
             </div>
             <hr>
             <div class="row">
-              <div class="col-sm-5">
-                <label class="form-label">Gustos:</label>
+              <div class="col-sm-12">
+                <label class="form-label">Tiempo de paseo:</label>
               </div>
-              <div class="col-sm-7">
-                <input type="text" placeholder="Gustos">
+              <div class="col-sm-12">
+                <div class="tiempo ">
+                  <button class="btn btn-success float-start w-25 " (click)="acumular(-base)">{{-base}} </button>
+                  <button class="btn  w-50" disabled>{{numero}} min</button>
+
+
+                  <button class="btn btn-success float-end w-25 " (click)="acumular(base)">+{{base}} </button>
+                </div>
+
+              </div>
+
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-12 ">
+                <label class="form-label">Tarifa:</label>
+              </div>
+              <div class="form-floating ">
+                $<input type="number" >
+              </div>
+            </div>
+            <hr>
+
+            <div class="row">
+              <div class="col-sm-12">
+                <label class="form-label">Detalles:</label>
+              </div>
+              <div class="form-floating ">
+                <textarea class="form-control textArea m-t-5" placeholder="Escribe sus gustos:"></textarea>
+                <label for="floatingTextarea" >Gustos:</label>
               </div>
             </div>
 
-            <div class="col m-auto" >
-              <br>
-              <button class="btn btn-success" >Enviar Solicitud</button>
+
+
+            <div class="col m-t-5 boton w-100 m-t-10 text-center" >
+
+              <button class="btn btn-success w-100 "  >Enviar Solicitud</button>
 
             </div>
 
@@ -105,7 +137,120 @@
 
     </div>
 
+    <!-- paseo grupal -->
+    <div class="ext row-cols-1  "*ngIf="paseo_grupal">
 
+      <div class="dis-flex flex-row f1 ">
+        <div class="col-6 text-center h-75 m-auto" (click)="irPersonalizado()">
+          <p class="m-auto" [ngClass]="{'blanco': paseo_pers }" >Paseo Personalizado</p>
+
+        </div>
+        <div class="col-6 text-center  m-auto" (click)="irGrupal()">
+          <p class="m-auto" [ngClass]="{'blanco': paseo_grupal }" >Paseo Grupal</p>
+        </div>
+
+      </div>
+
+      <div class="dis-flex flex-row f2 h-auto p-1">
+        <div class="col text-center">
+          <img src="../../../assets/images/dog-walker.png" width="100px" height="100px" alt="">
+        </div>
+        <div class="col text-center h-75 m-auto">
+          <b>Paseo Grupal</b>
+          <p class="t"> Con ésta opción de paseo puedes postular a tu(s) perro(s) para que pasen un maravilloso momento recreativo y amigable en compañia de otros perritos (Paseos con un máximo de 8). Ten en cuenta que debes acogerte al destino propuesto por los paseadores.</p>
+        </div>
+        <div class="col text-center  m-auto  ">
+          <div class="tarifa m-auto">
+            <p class="m-auto">Tarifa Base <br>$5000 pesos</p>
+          </div>
+        </div>
+        <hr>
+      </div>
+
+      <div class="dis-flex flex-row f3 h-75 servicio ">
+        <div class="col-4 m-auto  formulario p-t-50">
+
+          <form action="" class="row  m-auto">
+            <div class="row">
+              <div class="col-sm-12">
+                <label class="form-label">Nombre del Perro:</label>
+              </div>
+              <div class="col-sm-12  text-center ">
+
+                <select class="form-select-sm selector"   aria-label="Default select example" >
+                  <option selected>Selecciona </option>
+                  <!-- <option *ngFor="let p of Perros ; let i=index ">Punto {{i+1}} </option> -->
+                </select>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-12">
+                <label class="form-label" >Origen:</label>
+              </div>
+              <div class="col-sm-12  text-center ">
+                <select class="form-select-sm selector"   aria-label="Default select example" >
+                  <option selected>Selecciona </option>
+                  <option *ngFor="let m of marcadores ; let i=index " [ngStyle]="{'background-color': m.color }">Punto {{i+1}} </option>
+                </select>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-12">
+                <label class="form-label">Paseador:</label>
+              </div>
+              <div class="col-sm-12  text-center ">
+
+                <select class="form-select-sm selector"   aria-label="Default select example" >
+                  <option selected>Selecciona </option>
+                  <!-- <option *ngFor="let p of Perros ; let i=index ">Punto {{i+1}} </option> -->
+                </select>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-12">
+                <label class="form-label" >Destino del Paseador:</label>
+              </div>
+              <div class="col-sm-12  text-center ">
+                San pio<input type="text" disabled>
+              </div>
+            </div>
+            <hr>
+
+            <div class="row">
+              <div class="col-sm-12">
+                <label class="form-label">Tarifa:</label>
+              </div>
+              <div class="form-floating ">
+                $<input type="number" >
+              </div>
+            </div>
+
+
+
+
+
+
+            <div class="col m-t-5 boton w-100 m-t-10 text-center" >
+
+              <button class="btn btn-success w-100 " >Enviar Solicitud</button>
+
+            </div>
+
+
+          </form>
+        </div>
+
+
+        <div class="col-9 text-center mapa">
+
+          <app-mapa-marcador></app-mapa-marcador>
+        </div>
+      </div>
+
+    </div>
 
   </div>
 

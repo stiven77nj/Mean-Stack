@@ -1,56 +1,65 @@
 
-<div class="caja">
-  <div class="caja1">
-    <form class="login-form" autocomplete="off" [formGroup]="miFormulario" (ngSubmit)="login()">
+<div class="caja ">
+  <div class="cabecero">
 
-      <span class="login100-form-title p-b-49">
-          LOGIN
-      </span>
-
-      <div class="wrap-input100 m-b-23">
-          <span class="label-input100">Email</span>
-          <input class="input100"
-                type="email"
-                formControlName="email"
-
-                placeholder="Ingrese su email">
-          <span class="focus-input100"></span>
-      </div>
-
-      <div class="wrap-input100">
-          <span class="label-input100">Password</span>
-          <input class="input100"
-                type="password"
-                formControlName="password"
-
-                placeholder="Ingrese su contraseña">
-          <span class="focus-input100"></span>
-      </div>
-
-      <div class="text-right p-t-8 p-b-31"></div>
-
-      <div class="container-login100-form-btn">
-          <div class="wrap-login100-form-btn">
-              <div class="login100-form-bgbtn"></div>
-              <button class="login100-form-btn" type="submit" [disabled]="miFormulario.invalid">
-                  Login
-              </button>
-          </div>
-      </div>
-
-      <div class="flex-col-c p-t-60">
-          <span class="txt1 p-b-17">
-              ¿No tienes cuenta?
-          </span>
-
-          <a routerLink="/auth/registro" class="txt2">
-              Crear cuenta
-          </a>
-      </div>
-    </form>
+    <div class="dis-flex justify-content-center cabecero-img">
+      <img src="../../../assets/images/perro.png" width="200px" height="100px" alt="" >
+    </div>
   </div>
-  <div class="img">
-    <img src="../../../../assets/images/login-removebg-preview.png" alt="">
+  <div class="contenido dis-flex flex-row p-l-50 p-r-20 p-t-20 p-b-20">
+
+    <div class="caja1">
+      <form class="login-form" autocomplete="off" [formGroup]="miFormulario" (ngSubmit)="login()">
+
+        <span class="login100-form-title p-b-30 ">
+            LOGIN
+        </span>
+
+        <div class="wrap-input100 m-b-23">
+            <span class="label-input100">Email</span>
+            <input class="input100"
+                  type="email"
+                  formControlName="email"
+
+                  placeholder="Ingrese su email">
+            <span class="focus-input100"></span>
+        </div>
+
+        <div class="wrap-input100">
+            <span class="label-input100">Password</span>
+            <input class="input100"
+                  type="password"
+                  formControlName="password"
+
+                  placeholder="Ingrese su contraseña">
+            <span class="focus-input100"></span>
+        </div>
+
+        <div class="text-right p-t-8 p-b-31"></div>
+
+        <div class="container-login100-form-btn">
+            <div class="wrap-login100-form-btn">
+                <div class="login100-form-bgbtn"></div>
+                <button class="login100-form-btn" type="submit" [disabled]="miFormulario.invalid">
+                    Login
+                </button>
+            </div>
+        </div>
+
+        <div class="flex-col-c p-t-60">
+            <span class="txt1 p-b-17">
+                ¿No tienes cuenta?
+                <a routerLink="/auth/registro" class=" dis-flex justify-content-center txt2">
+                    Crear cuenta
+                </a>
+            </span>
+
+        </div>
+      </form>
+    </div>
+    <div class="img">
+      <img src="../../../../assets/images/login-removebg-preview.png" alt="">
+    </div>
   </div>
 </div>
 

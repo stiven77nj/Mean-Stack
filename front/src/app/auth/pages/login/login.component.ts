@@ -10,10 +10,11 @@ import { PlacesService } from '../../services';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-
+  // piti@gmail.com
+  // pato123
   miFormulario:FormGroup=this.fb.group({
-    email:['piti@gmail.com',[Validators.required,Validators.email]],
-    password:['pato123',[Validators.required,Validators.minLength(6)]]
+    email:['',[Validators.required,Validators.email]],
+    password:['',[Validators.required,Validators.minLength(6)]]
   });
 
   constructor(

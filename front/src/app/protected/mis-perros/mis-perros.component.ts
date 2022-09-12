@@ -9,21 +9,21 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './mis-perros.component.html',
   styleUrls: ['./mis-perros.component.css']
 })
-export class MisPerrosComponent{
+export class MisPerrosComponent implements OnInit{
 
+  perros: Perro[]=[];
 
   constructor(private authService:AuthService ) { }
 
-  get Perro(){
-    return this.authService.Perros;
+  ngOnInit(): void {
+
+    this.authService.listarPerro().subscribe(perros => this.perros = perros);
+
   }
-  // np:Perro={
-  //   nombre:'Pepe',
-  //   edad:5,
-  //   raza:'Chandito',
-  //   preferencias:'Mimir',
-  //   vacunas:'Rabia'
-  // }
+  p(){
+
+    console.log(Object.values(this.perros))
+  }
 
 
 

@@ -29,6 +29,7 @@ ul{
 }
 .menu{
   position:fixed; top:0; left:0;width: 15%;
+  border-right: solid white 1px;
 }
 .opc{
   background-color: #004E89;

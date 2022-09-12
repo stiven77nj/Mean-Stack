@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProtectedRoutingModule } from './protected-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MenuComponent } from './menu/menu.component';
@@ -15,6 +16,9 @@ import { HistorialComponent } from './historial/historial.component';
 import { SolicitudComponent } from './solicitud/solicitud.component';
 import { EditarPerroComponent } from './editar-perro/editar-perro.component';
 import { MapaMarcadorComponent } from './mapa-marcador/mapa-marcador.component';
+import { PerroTarjetaComponent } from './perro-tarjeta/perro-tarjeta.component';
+import { MapaSeguimientoComponent } from './mapa-seguimiento/mapa-seguimiento.component';
+
 
 
 @NgModule({
@@ -30,13 +34,17 @@ import { MapaMarcadorComponent } from './mapa-marcador/mapa-marcador.component';
     HistorialComponent,
     SolicitudComponent,
     EditarPerroComponent,
-    MapaMarcadorComponent
+    MapaMarcadorComponent,
+    PerroTarjetaComponent,
+    MapaSeguimientoComponent
   ],
   imports: [
     CommonModule,
     ProtectedRoutingModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   exports:[
     MenuComponent,
@@ -45,7 +53,8 @@ import { MapaMarcadorComponent } from './mapa-marcador/mapa-marcador.component';
     MapasComponent,
     MisPerrosComponent,
     MapasComponent,
-    MapaMarcadorComponent
+    MapaMarcadorComponent,
+    PerroTarjetaComponent
 
   ]
 })

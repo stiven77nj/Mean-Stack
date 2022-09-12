@@ -24,5 +24,6 @@ export class DashboardComponent  {
   constructor(private router:Router, private authService:AuthService,private placesService:PlacesService) { }
   logout(){
     this.router.navigateByUrl('/auth');
+    this.authService.logOut();
   }
 }

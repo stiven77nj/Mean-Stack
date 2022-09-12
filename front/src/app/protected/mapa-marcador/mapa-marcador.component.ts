@@ -31,11 +31,7 @@ export class MapaMarcadorComponent implements AfterViewInit {
     });
 
     this.leerLocalStorage();
-    // const makerHtml : HTMLElement = document.createElement('div');
-    // makerHtml.innerHTML= 'Hola';
-    // new mapboxgl.Marker({
-    //   element:makerHtml
-    // })
+
 
 
 
@@ -61,10 +57,6 @@ export class MapaMarcadorComponent implements AfterViewInit {
       console.log('drag')
       this.guardarMarcadorLocalStorage();
     } );
-    // nuevoMarker.on('dragend',()=>{
-    //   console.log('drag')
-    //   this.guardarMarcadorLocalStorage();
-    // });
   }
 
   IrMarcador(marker:mapboxgl.Marker){
@@ -126,4 +118,5 @@ export class MapaMarcadorComponent implements AfterViewInit {
     this.guardarMarcadorLocalStorage();
 
   }
+
 }

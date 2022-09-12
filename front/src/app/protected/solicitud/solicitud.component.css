@@ -1,29 +1,100 @@
 
 .content{
   position:fixed;
-  top:60px;
+  top:70px;
   left:15%;
   width: 85%;
   height: 100vh;
-  border:solid red 1px;
+  /* border:solid red 1px; */
   padding: 10px;
 
 }
 
 .ext{
-  border: solid black 1px;
-  height: 80vh;
+  /* border: solid green 1px; */
+  height: 85vh;
+  border-radius: 20px 20px 20px 20px;
 
 }
 .f1 , .f2 ,.f3{
-  border: solid blue 1px;
+  border: solid black 1px;
+}
+.f1{
+  background-color: rgb(20, 74, 145);
+  border: solid rgb(0, 0, 0) 1px;
+  border-radius: 10px 10px 0 0;
+}
+.f1 p{
+  color: white;
+}
+.f2{
+  background-color: lightgrey;
+}
+.f3{
+  border-radius: 0 0 20px 20px;
+}
+.servicio{
+  height: 70vh;
 }
 .formulario{
+  /* padding: 50px; */
   width: 30%;
-  border: solid black 1px;
+  /* border: solid black 1px; */
+  font-size: 12px;line-height:0;
+  height: 60vh;
+}
+form{
+  /* height: 40vh; */
+  width: 80%;
+  text-align: start;
 }
 .mapa{
   width: 65%;
   height: 90%;
   margin: auto;border: solid black 1px;
+}
+.selector{
+  width: 150px;
+  height: 25px;
+  font-size: 12px;
+  margin: 5px 0;
+  text-align: start;
+
+}
+.textArea{
+  height: 50px;width:200px;font-size: 10px;
+}
+.tiempo{
+  margin: 5px 0;
+  width: 250px;
+  /* border: solid lightgray 1px; */
+}
+.btn{
+  font-size: 12px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px grey;
+
+}
+.t{
+  font-size: 10px;
+}
+.blanco{
+  background-color: rgb(80, 80, 80);
+  border-radius: 10px 10px 0 0;
+}
+.tarifa{
+  border-radius: 50px;
+  background-color: rgb(255, 239, 148);
+  width: 150px;
+  height: 75px;
+  padding-top: 10px;
+  text-align: center;
+  border: solid black 1px;
+}
+.tarifa p{
+  color: black;
+
+}
+b{
+  font-size: 16px;
 }

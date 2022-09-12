@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators,ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { AuthService } from '../../services/auth.service';
@@ -16,6 +16,8 @@ export class RegistroComponent {
     password:['',[Validators.required,Validators.minLength(6)]]
   })
   constructor(private fb:FormBuilder,private router:Router,private authService:AuthService) { }
+
+
 
   registro(){
 

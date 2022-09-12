@@ -153,8 +153,9 @@ button:hover {
 .wrap-login100 {
   width: 900px;
   background: #fff;
-  border-radius: 10px;
+  border-radius: 20px;
   overflow: hidden;
+  border: solid black 1px;
 }
 
 

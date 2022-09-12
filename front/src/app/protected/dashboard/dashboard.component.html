@@ -7,13 +7,70 @@
 
   <div class="content overflow-auto">
     <app-menu></app-menu>
-    <app-mapas></app-mapas>
-    <h2>Dashboard</h2>
-    <hr><hr>
+    <div class="mapa">
+      <app-mapas></app-mapas>
 
-    <h3>User info</h3>
-    <pre>{{usuario.name}} <br>{{usuario.uid}}  </pre>
+    </div>
+    <br>
+    <div class="tabla">
+      <nav class="navbar bg-light m-auto p-t-10">
+        <div class="container-fluid ">
 
+          <select class="form-select form-select-sm w-50" aria-label=".form-select-sm example">
+            <option selected>Todos los paseadores</option>
+            <option value="1">Paseadores Destacados</option>
+            <option value="2">Paseadores Nuevos</option>
+            <option value="3">Paseadores Cercanos</option>
+          </select>
+
+          <form class="d-flex " role="search">
+            <input class="form-control me-2" type="search" placeholder="¿Qué deseas buscar?" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
+        </div>
+      </nav>
+      <hr>
+
+      <table class="table table-striped table-hover text-center">
+        <thead>
+          <tr>
+            <th scope="col"><b>Estado</b></th>
+            <th scope="col"><b>Paseador</b></th>
+            <th scope="col"><b>Paseo</b></th>
+            <th scope="col"><b>Estado del Paseo</b></th>
+            <th scope="col"><b>Destino</b></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td scope="row">Activo</td>
+            <td>Juan Carlos Martinez</td>
+            <td>PERSONALIZADO</td>
+            <td>En Curso</td>
+            <td>*****</td>
+          </tr>
+          <tr>
+            <td scope="row">Inactivo</td>
+            <td>Rodrigo Perez</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td scope="row">Activo</td>
+            <td >Valeria Alzate</td>
+            <td>GRUPAL</td>
+            <td>Recogiendo</td>
+            <td>Parque La Flora</td>
+          </tr>
+        </tbody>
+      </table>
+      <hr>
+
+    </div>
+    <br><br><br><br>
+    <!-- <h3>User info</h3>
+    <pre>{{usuario.name}} <br>{{usuario.uid}} <br>{{usuario.email}} </pre> -->
 
 
   </div>

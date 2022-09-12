@@ -63,6 +63,7 @@ const loginUser = async ( req = request, res = response ) => {
             ok: true,
             uid: user.id,
             name: user.name,
+            email: user.email,
             token
         });
 
@@ -78,10 +79,12 @@ const loginUser = async ( req = request, res = response ) => {
 // Controlador para renovar jwt
 const renovarToken = async ( req = request, res = response ) => {
 
-    const { uid, name } = req;
+    const { uid} = req;
+    //leer la base de datos
+    const dbUser = await User.findById(uid);
 
     // Renovar el JSON WEB TOKEN
-    const token = await generateJWT( uis, name ); // Recibe como parametro lo que se quiere guardar en el payload
+    const token = await generateJWT( uid, dbUser.name ); // Recibe como parametro lo que se quiere guardar en el payload
 
 
     if ( !token ) {
@@ -94,7 +97,9 @@ const renovarToken = async ( req = request, res = response ) => {
     return res.json({
         ok: true,
         uid,
-        name
+        name: dbUser.name,
+        email:dbUser.email,
+        token
     })
 }
 
@@ -126,7 +131,11 @@ const createDog = async ( req = request, res = response ) => {
 
         // Respuesta a la solicitud
         res.status(200).json({
+            ok:true,
             msg: 'Mascota agregada',
+            name:newDog.name,
+            age:newDog.age,
+            breed:newDog.breed
         });
 
     } catch (error) {
